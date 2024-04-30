@@ -5,7 +5,7 @@ Now i will show you how to optimize original program about a simple calculator.L
 
 First we should learn some controls about layout.Here are some controls about "[Grid](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/controls/grid?view=netframeworkdesktop-4.8)"
 
-* [Panel][1] Class:
+* [Panel](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel?view=windowsdesktop-8.0)
   >Namespace:[System.Windows.Controls](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls?view=windowsdesktop-8.0)
   >
   >Assembly:PresentationFramework.dll
