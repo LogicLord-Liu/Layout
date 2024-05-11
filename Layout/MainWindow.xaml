@@ -6,6 +6,16 @@
         xmlns:local="clr-namespace:Layout"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="CalculatorTestStyle" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Aqua"/>
+                    <Setter Property="Background" Value="AntiqueWhite"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <!--Grid控件
         1.子控件默认居中
@@ -64,22 +74,22 @@
             
         </Canvas>
         <UniformGrid Grid.Row="1" Rows="4" Columns="4" >
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">1</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">2</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">3</Button>
-            <Button FontSize="30" Background="White" Click="BtnOperator_Click">+</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">4</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">5</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">6</Button>
-            <Button FontSize="30" Background="White" Click="BtnOperator_Click">-</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">7</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">8</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">9</Button>
-            <Button FontSize="30" Background="White" Click="BtnOperator_Click">*</Button>
-            <Button FontSize="30" Background="White" Click="BtnInput_Click">0</Button>
-            <Button FontSize="30" Background="White" Click="BtnClear_Click">AC</Button>
-            <Button FontSize="30" Background="White" Click="BtnEquals_Click">=</Button>
-            <Button FontSize="30" Background="White" Click="BtnOperator_Click">/</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}"  Click="BtnInput_Click">1</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">2</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">3</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">+</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">4</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">5</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">6</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">-</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">7</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">8</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">9</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">*</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">0</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnClear_Click">AC</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnEquals_Click">=</Button>
+            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">/</Button>
             
         </UniformGrid>
     </Grid>
