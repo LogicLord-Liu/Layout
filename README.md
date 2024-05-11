@@ -105,6 +105,7 @@ First we should learn some controls about layout.Here are some controls about "[
    >资源是可以在应用中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用 Extensible Application Markup Language (XAML) 中的资源。 你还可以使用代码创建和访问资源.
    >
    >[ResoursesDictionary](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.resourcedictionary?view=windowsdesktop-8.0)
+   >
    >Namespace: [System.Windows](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows?view=windowsdesktop-8.0)
    >
    >Assembly: PresentationFramework.dll
