@@ -59,5 +59,15 @@ namespace Layout
                 txtInput.Text = "Error";
             }
         }
+
+        private void LittleSize_Click(object sender, RoutedEventArgs e)
+        {
+            txtInput.FontSize = 15;
+        }
+
+        private void LargeSize_Click(object sender, RoutedEventArgs e)
+        {
+            txtInput.FontSize = 50;
+        }
     }
 }

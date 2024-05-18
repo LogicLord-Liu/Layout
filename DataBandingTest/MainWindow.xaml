@@ -42,5 +42,19 @@
         <StackPanel>
             <TextBox Text="{Binding Path=Title}"></TextBox>
         </StackPanel>
+
+        <StackPanel>
+            <ListBox x:Name="ListBoxTemplateTarget" FontSize="18">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <Label Content="{Binding Path=ID}"></Label>
+                            <Label Content="-"></Label>
+                            <Label Content="{Binding Path=Name}"></Label>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </UniformGrid>
 </Window>
