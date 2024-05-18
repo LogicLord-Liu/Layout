@@ -35,6 +35,7 @@ namespace DataBandingTest
             this.InitializedList();
             ListBoxTarget.ItemsSource = list;
             this.DataContext = this;
+            ListBoxTemplateTarget.ItemsSource = list; 
         }
         private void BindingUiData()
         {
@@ -45,15 +46,16 @@ namespace DataBandingTest
         }
         private void InitializedList()
         {
-            //list.Add("001");
-            //list.Add("002");
-            
+            list.Add("001");
+            list.Add("002");
+
         }
 
         private void AddValue_Click(object sender, RoutedEventArgs e)
         {
             var va1 = InputValue.Text;
             list.Add(va1);
+           
         }
     }
     class StringToBooleanC : IValueConverter

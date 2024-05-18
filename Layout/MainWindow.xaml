@@ -67,29 +67,32 @@
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Background="#c2c2c2">
+            <Slider x:Name="sliderFontSize" Minimum="1" Maximum="40" Value="30"
+                TickFrequency="1" TickPlacement="TopLeft"/>
             
         </StackPanel>
         <Canvas>
-            <TextBlock x:Name="txtInput" Canvas.Top="30" Canvas.Left="50" Height="95" Width="700" FontSize="30" Background="White"/>
-            
+            <TextBlock x:Name="txtInput" FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Canvas.Top="30" Canvas.Left="50" Height="80" Width="700" Background="White"/>
+            <Button x:Name="littleSize" Click="LittleSize_Click" Width="100" Height="30" Canvas.Left="86" Canvas.Top="120" FontSize="20">Little</Button>
+            <Button x:Name="LargeSize" Click="LargeSize_Click" Width="100" Height="30" Canvas.Right="86" Canvas.Top="120" FontSize="20">Large</Button>
         </Canvas>
         <UniformGrid Grid.Row="1" Rows="4" Columns="4" >
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}"  Click="BtnInput_Click">1</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">2</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">3</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">+</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">4</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">5</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">6</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">-</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">7</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">8</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">9</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">*</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">0</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnClear_Click">AC</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnEquals_Click">=</Button>
-            <Button FontSize="30" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">/</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}"  Click="BtnInput_Click">1</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">2</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">3</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">+</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">4</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">5</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">6</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">-</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">7</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">8</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">9</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">*</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnInput_Click">0</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnClear_Click">AC</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnEquals_Click">=</Button>
+            <Button FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Background="White" Style="{StaticResource CalculatorTestStyle}" Click="BtnOperator_Click">/</Button>
             
         </UniformGrid>
     </Grid>
