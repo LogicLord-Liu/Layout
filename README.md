@@ -151,6 +151,37 @@ First we should learn some controls about layout.Here are some controls about "[
    >    <Button FontSize="14" FontWeight="{StaticResource fontWeight}" Content="修改颜色"/>
    ></StackPanel>
    >```
+* [Binding](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/data/data-binding-overview?view=netframeworkdesktop-4.8)
+  >What's the 'Data Binding'?
+  >
+  >>数据绑定是在应用 UI 与其显示的数据之间建立连接的过程。 如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。 数据绑定还意味着，如果元素中数据的外部表示形式发生更改，则基础数据可   以自动进行更新以反映更改。
+  >>
+  >数据绑定模式
+  >
+  >* [单向](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.data.bindingmode#system-windows-data-bindingmode-oneway)(OneWay)
+  >
+  >* [双向](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.data.bindingmode#system-windows-data-bindingmode-twoway)(TwoWay)
+  >
+  >* [指定数据源单向](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.data.bindingmode#system-windows-data-bindingmode-onewaytosource)(OneWayToSource)
+  >
+  >* [一次性](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.data.bindingmode#system-windows-data-bindingmode-onetime)(OneTime)
+  >
+  >Create a DataBinding
+  >
+  >* UI对象间的绑定
+  >```C#
+  ><StackPanel>
+  >    <TextBox x:Name="txtName" Width="200" BorderThickness="0" Height="50" Text="Source Element" TextChanged="txtName_TextChanged" />
+  >    <TextBlock x:Name="tbShowMessage" Width="200" Height="50" Text="{Binding ElementName=txtName, Path=Text}" /> 
+  ></StackPanel>
+  >```
+  >
+  >* 绑定到集合
+  >
+  >下面语句将一个名为 photos 的集合赋予 ListBox 对象，并显示 Name 属性值：
+  >```C#
+  ><ListBox x:Name="pictureBox" DisplayMemberPath="Name" ItemsSource="{Binding {DynamicResource photos}}" />
+  >```
 #### We just need to learn these controls about layout,then we can optimize our original program of calculator.
 
 ********
@@ -161,7 +192,7 @@ First we should learn some controls about layout.Here are some controls about "[
 >>
 >>Email:luc444175@gmail.com
 >>
->>This is the [official document](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/controls/?view=netframeworkdesktop-4.8) about controls.
+>>This is the [official document](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/controls/?view=netframeworkdesktop-4.8) about WPF.
      
      
 
