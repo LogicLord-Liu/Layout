@@ -14,6 +14,9 @@
                     <Setter Property="Background" Value="AntiqueWhite"/>
                 </Trigger>
             </Style.Triggers>
+            <Setter Property="Foreground" Value="Aquamarine"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
     </Window.Resources>
     <Grid>
