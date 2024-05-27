@@ -22,7 +22,7 @@ First we should learn some controls about layout.Here are some controls about "[
   >     <Button>Button 2</Button>
   >  </StackPanel>
   ></Page>
-  >```c#
+  >
   >using System.Windows.Controls;
   >
   
